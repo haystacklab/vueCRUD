@@ -1,7 +1,7 @@
 <template>
   <div class="PatchAppDiv">
     <h1>{{msg}}</h1>
-    <div class="postForm">
+    <div class="patchForm">
       <form v-on:submit="submitGetRequest">
         <input v-model="id" placeholder="Enter ID"/> <br>
         <button type="submit">Get Data to edit</button>
