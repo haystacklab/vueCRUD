@@ -7,23 +7,23 @@
 </template>
 
 <script>
-import GetApp from './GetApp.vue'
-import PostApp from './PostApp.vue'
-export default {
-  name: 'MainApp',
-  props: {
-    msg: String
-  },
-  components: {
-    GetApp,
-    PostApp
-  },
-}
+  import GetApp from './GetApp.vue'
+  import PostApp from './PostApp.vue'
+  export default {
+    name: 'MainApp',
+    props: {
+      msg: String
+    },
+    components: {
+      GetApp,
+      PostApp
+    },
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.mainAppDiv {
+  .mainAppDiv {
     border: 1px solid #000000;
-}
+  }
 </style>

@@ -10,38 +10,37 @@
 </template>
 
 <script>
-export default {
-  name: 'GetApp',
-  props: {
-    msg: String
-  },
-  data () {
-    return {
-      mydat: '',
-      users: [],
-    }
-  },
-  methods: {
-    async getData () {
-      fetch('https://jsonplaceholder.typicode.com/users')
-      .then(function (response) { return response.json() })
-      .then(this.setResults)
+  export default {
+    name: 'GetApp',
+    props: {
+      msg: String
     },
-    setResults (data) {
-        console.log(data)
-        this.users = data;
+    data () {
+      return {
+        users: [],
+      }
+    },
+    methods: {
+      async getData () {
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(function (response) { return response.json() })
+        .then(this.setResults)
+      },
+      setResults (data) {
+          console.log(data)
+          this.users = data;
+      }
+    },
+    created () {
+      this.getData()
     }
-  },
-  created () {
-    this.getData()
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.GetAppDiv {
-    border: 1px dotted #000000;
-    margin: 5px;
-}
+  .GetAppDiv {
+      border: 1px dotted #000000;
+      margin: 5px;
+  }
 </style>
