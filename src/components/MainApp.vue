@@ -1,8 +1,8 @@
 <template>
   <div class="mainAppDiv">
     <h1>{{ msg }}</h1>
-    <GetApp msg="Get Request"/>
-    <PostApp msg="Post Request"/>
+    <GetApp msg="Get Request" :apiURL="apiURL" />
+    <PostApp msg="Post Request" :apiURL="apiURL" />
   </div>
 </template>
 
@@ -13,6 +13,11 @@
     name: 'MainApp',
     props: {
       msg: String
+    },
+    data () {
+      return {
+        apiURL: 'https://jsonplaceholder.typicode.com',
+      }
     },
     components: {
       GetApp,

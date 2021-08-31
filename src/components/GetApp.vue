@@ -13,7 +13,8 @@
   export default {
     name: 'GetApp',
     props: {
-      msg: String
+      msg: String,
+      apiURL: String,
     },
     data () {
       return {
@@ -22,12 +23,11 @@
     },
     methods: {
       async getData () {
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch(this.apiURL + '/users')
         .then(function (response) { return response.json() })
         .then(this.setResults)
       },
       setResults (data) {
-          console.log(data)
           this.users = data;
       }
     },
