@@ -17,7 +17,9 @@
         </form>
       </div>
       <div class="showResp" v-if="dataUpdated">
-        <p>Your data has been updated</p>
+        <p>Your data has been updated. Your updated data:</p>
+        <p>Title: {{fetchedObj.title}}</p>
+        <p>Body: {{fetchedObj.body}}</p>
       </div>
     </div>
   </div>
@@ -81,6 +83,8 @@
       showResp (data) {
         if (data.id) {
           this.dataUpdated = true;
+          this.fetchedObj = Object.assign(this.fetchedObj, data)
+
         }
       }
     }
