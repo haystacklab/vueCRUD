@@ -72,3 +72,10 @@ export default {
   
 }
 </script>
+
+<style scoped>
+  .deleteApp {
+    border: 1px dotted #000000;
+    margin: 5px;
+  }
+</style>
