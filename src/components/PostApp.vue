@@ -3,7 +3,7 @@
       <h1>{{msg}}</h1>
       <div class="postForm">
         <form v-on:submit="submitPostRequest">
-          <input v-model="username" /> <br>
+          <input v-model="username" placeholder="username" /> <br>
           <button type="submit">Submit Post Data</button>
         </form>
         <div class="responseDiv" v-if="dataSaved">
