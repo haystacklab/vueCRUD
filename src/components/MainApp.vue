@@ -1,0 +1,29 @@
+<template>
+  <div class="mainAppDiv">
+    <h1>{{ msg }}</h1>
+    <GetApp msg="Get Request"/>
+    <PostApp msg="Post Request"/>
+  </div>
+</template>
+
+<script>
+import GetApp from './GetApp.vue'
+import PostApp from './PostApp.vue'
+export default {
+  name: 'MainApp',
+  props: {
+    msg: String
+  },
+  components: {
+    GetApp,
+    PostApp
+  },
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.mainAppDiv {
+    border: 1px solid #000000;
+}
+</style>
