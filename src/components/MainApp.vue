@@ -4,6 +4,7 @@
     <GetApp msg="Get Request" :apiURL="apiURL" />
     <PostApp msg="Post Request" :apiURL="apiURL" />
     <PatchApp msg="Patch Request" :apiURL="apiURL" />
+    <DeleteApp msg="Delete Request" :apiURL="apiURL" />
   </div>
 </template>
 
@@ -11,6 +12,7 @@
   import GetApp from './GetApp.vue'
   import PostApp from './PostApp.vue'
   import PatchApp from './PatchApp.vue'
+  import DeleteApp from './DeleteApp.vue'
   export default {
     name: 'MainApp',
     props: {
@@ -24,7 +26,8 @@
     components: {
       GetApp,
       PostApp,
-      PatchApp
+      PatchApp,
+      DeleteApp,
     },
   }
 </script>
